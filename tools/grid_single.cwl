@@ -26,12 +26,15 @@ inputs:
         doc: "Number of threads"
         inputBinding:
             prefix: "-n"
-arguments:
-    - prefix: "-o"
-      valueFrom: "grid_output_dir"
+    "o":
+        type: string?
+        doc: "Output dir name (default: grid_output_dir)"
+        default: "grid_output_dir"
+        inputBinding:
+            prefix: "-o"
 
 outputs:
     "output_plot":
         type: Directory
         outputBinding:
-            glob: "grid_output_dir"
+            glob: $(inputs.o)
