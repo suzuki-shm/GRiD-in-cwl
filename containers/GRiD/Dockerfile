@@ -5,6 +5,11 @@ LABEL description="Container for GRiD"
 
 ENV TOOLDIR /opt
 
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends bc && \
+    rm -rf /var/lib/apt/lists/*
+
+
 RUN conda config --ad channels defaults && \
     conda config --add channels bioconda && \
     conda config --add channels conda-forge && \
