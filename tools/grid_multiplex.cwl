@@ -20,7 +20,7 @@ inputs:
         doc: "GRiD database directory"
         inputBinding:
             prefix: "-d"
-    "-p":
+    "p":
         type: boolean?
         doc: "Enable reassignment of ambiguous reads using Pathoscope2"
         inputBinding:
