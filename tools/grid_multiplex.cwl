@@ -2,12 +2,13 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: ["multiplex"]
+baseCommand: ["grid", "multiplex"]
 hints:
     DockerRequirement:
-        dockerImageId: ajhjhaf/grid:1.2
-        dockerFile:
-            $include: ../containers/GRiD/Dockerfile
+        dockerPull: ajhjhaf/grid:1.2
+        # dockerImageId: ajhjhaf/grid:1.2
+        # dockerFile:
+        #     $include: ../containers/GRiD/Dockerfile
 
 inputs:
     "r":

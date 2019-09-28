@@ -2,7 +2,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: ["single"]
+baseCommand: ["grid", "single"]
 hints:
     DockerRequirement:
         dockerImageId: ajhjhaf/grid:1.2

@@ -15,5 +15,4 @@ RUN conda config --ad channels defaults && \
     conda config --add channels conda-forge && \
     conda install grid==1.2
 
-ENTRYPOINT ["grid"]
-CMD ["-h"]
+CMD ["grid", "-h"]
