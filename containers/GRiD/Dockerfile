@@ -6,7 +6,8 @@ LABEL description="Container for GRiD"
 ENV TOOLDIR /opt
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends bc && \
+    apt-get install -y --no-install-recommends bc \
+                                               procps && \
     rm -rf /var/lib/apt/lists/*
 
 
